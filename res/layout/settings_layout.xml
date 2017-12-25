@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_bar_color"
+        android:padding="@dimen/margin_smaller" >
+
+        <com.moblong.flipped.wedget.CircleImageView
+            android:id="@+id/menubar_portrait"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/alias"
+            android:layout_below="@+id/menubar_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_smallest"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar" />
+
+</RelativeLayout>

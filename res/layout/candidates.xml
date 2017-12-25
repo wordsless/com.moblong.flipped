@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ivory"
+    android:orientation="vertical" >
+
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+	    android:id="@+id/candidates"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentTop="true"
+	    android:background="@color/ivory"
+	    android:divider="#e4e4e4"
+	    android:dividerHeight="1dp"
+	    android:padding="@dimen/margin_smallest" />
+
+</RelativeLayout>

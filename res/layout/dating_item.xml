@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_smallest"
+    android:background="@drawable/single_round_corner_with_white" >
+
+    <RelativeLayout
+        android:id="@+id/time_dating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <TextView
+	        android:id="@+id/hourse_dating"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#e97e54"
+	        android:textColor="#FFF"
+	        android:textSize="13sp"
+	        android:layout_alignLeft="@+id/minute_dating"
+	        android:layout_alignRight="@+id/minute_dating"
+	        android:padding="5dp"
+	        android:gravity="center"
+	        android:text="3天后"/>
+        <TextView
+	        android:id="@+id/minute_dating"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/hourse_dating"
+	        android:background="#ff895b"
+	        android:textSize="30sp"
+	        android:padding="5dp"
+	        android:textColor="#FFF"
+	        android:text="12:30"/>
+        <TextView
+	        android:id="@+id/date_dating"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/minute_dating"
+	        android:background="#ff895b"
+	        android:textSize="13sp"
+	        android:padding="5dp"
+	        android:layout_alignLeft="@+id/minute_dating"
+	        android:layout_alignRight="@+id/minute_dating"
+	        android:gravity="center"
+	        android:textColor="#FFF"
+	        android:text="03月07日"/>
+    </RelativeLayout>
+
+	<ImageView
+	    android:id="@+id/portrait_dating"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/time_dating"
+	    android:layout_alignBottom="@+id/time_dating"
+	    android:layout_toRightOf="@+id/time_dating"
+	    android:adjustViewBounds="true"
+	    android:scaleType="fitStart"/>
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/time_dating"
+	    android:padding="5dp"
+	    android:layout_alignLeft="@+id/time_dating"
+	    android:layout_alignStart="@+id/time_dating"
+	    android:layout_alignRight="@+id/portrait_dating"
+	    android:layout_alignEnd="@+id/portrait_dating"
+	    android:layout_marginTop="5dp">
+	    
+	    <ImageView
+	        android:id="@+id/coffee_icon"
+	        android:layout_width="40dp"
+	    	android:layout_height="40dp"
+	    	android:layout_centerVertical="true"
+	    	android:src="@drawable/costacoffee"/>
+	    
+	    <TextView
+	        android:id="@+id/address"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:layout_toRightOf="@+id/coffee_icon"
+	        android:padding="5dp"
+	        android:gravity="left"
+	        android:text="北京市西城区西单北大街133号\n北京君太百货地下一层\n(010)66125738"
+	        android:textSize="10sp" />
+
+	</RelativeLayout>
+</RelativeLayout>

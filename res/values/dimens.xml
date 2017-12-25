@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">360dp</dimen>
+	<dimen name="slidingmenu_offset">190dp</dimen>
+	<dimen name="slidingmenu_shadow">16dp</dimen>
+	<dimen name="interval_of_detail_top">30dp</dimen>
+	<dimen name="indicator_internal_padding_of_avatar">30dp</dimen>
+	<dimen name="margin_larger">60dp</dimen>
+	<dimen name="margin_large">45dp</dimen>
+	<dimen name="margin_small">30dp</dimen>
+	<dimen name="margin_smaller">15dp</dimen>
+	<dimen name="margin_smallest">5dp</dimen>
+	<dimen name="huge_text">44sp</dimen>
+	<dimen name="large_text">22sp</dimen>
+	<dimen name="medium_text">18sp</dimen>
+	<dimen name="small_text">14sp</dimen>
+	<dimen name="micro_text">12sp</dimen>
+	<dimen name="text">@dimen/medium_text</dimen>
+	<dimen name="setting_for_self_height">133dp</dimen>
+	<dimen name="setting_for_self_weight">300dp</dimen>
+	<dimen name="portrait_size">40dp</dimen>
+	<dimen name="corner">8dp</dimen>
+	<dimen name="diameter">120dp</dimen>
+	<dimen name="diameter_inner">100dp</dimen>
+</resources>

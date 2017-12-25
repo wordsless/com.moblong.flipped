@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_bar_color" >
+        
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_smallest"
+            android:src="@drawable/settings" />
+        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/setting"
+            android:layout_toEndOf="@+id/setting"
+            android:layout_margin="@dimen/margin_smallest"
+            android:textSize="@dimen/medium_text"
+            android:text="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_smallest"
+            android:src="@drawable/search" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navigate"
+        android:layout_below="@+id/topbar"
+        android:background="@color/ivory" />
+
+    <LinearLayout
+        android:id="@+id/navigate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_bar_color"
+        android:baselineAligned="true"
+        android:orientation="horizontal" >
+        
+        <!-- 候选人按键 -->
+		<FrameLayout
+		    android:id="@+id/candidate"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:padding="5dp">
+			<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="5dp">
+	
+	            <ImageView
+	                android:id="@+id/refer_icon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:src="@drawable/refer_a_friend_icon_gray" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:text="@string/friends"
+	                android:textColor="@color/ivory" />
+	        </LinearLayout>
+			<TextView
+			    android:id="@+id/candidate_count"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:background="@drawable/circular_full_red_bg"
+				android:visibility="gone"
+				android:text="1"/>
+		</FrameLayout>
+
+		<!-- 收藏按键 -->
+		<FrameLayout
+		    android:id="@+id/favorite"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:padding="5dp">
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="5dp" >
+	
+	            <ImageView
+	                android:id="@+id/favorite_icon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:src="@drawable/favorite_gray" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:text="@string/favorite"
+	                android:textColor="@color/ivory" />
+	        </LinearLayout>
+			<TextView
+			    android:id="@+id/interesting_count"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:background="@drawable/circular_full_red_bg"
+				android:visibility="gone"
+				android:text="1"/>
+		</FrameLayout>
+
+		<!-- 认证 -->
+		<FrameLayout
+		    android:id="@+id/certificate"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:padding="5dp">
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="5dp" >
+	
+	            <ImageView
+	                android:id="@+id/authentication_icon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:src="@drawable/certificate_gray" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:text="@string/authentication"
+	                android:textColor="@color/ivory" />
+	        </LinearLayout>
+			<TextView
+			    android:id="@+id/cert_count"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:background="@drawable/circular_full_red_bg"
+				android:visibility="gone"
+				android:text="1"/>
+		</FrameLayout>
+		
+		<!-- 约会 -->
+		<FrameLayout
+		    android:id="@+id/dating"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:orientation="vertical"
+	        android:padding="5dp">
+        	<LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="5dp" >
+	
+	            <ImageView
+	                android:id="@+id/dating_icon"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:src="@drawable/dates_gray" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:text="@string/dates"
+	                android:textColor="@color/ivory" />
+	        </LinearLayout>
+			<TextView
+			    android:id="@+id/dating_count"
+			    android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right"
+				android:background="@drawable/circular_full_red_bg"
+				android:visibility="gone"
+				android:text="1"/>
+		</FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

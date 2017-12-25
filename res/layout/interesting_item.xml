@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/single_round_corner_with_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_smallest" >
+
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="姜薇薇" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_smallest"
+            android:layout_toLeftOf="@+id/intimacy"
+            android:contentDescription="亲密度"
+            android:src="@drawable/heart"
+            android:textColor="#0e0eff" />
+
+        <TextView
+            android:id="@+id/intimacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="102"
+            android:textColor="#a4a4a4" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:adjustViewBounds="true"
+        android:padding="0dp"
+        android:scaleType="centerInside"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_smallest" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_smallest"
+            android:layout_marginRight="@dimen/margin_smallest"
+            android:layout_toLeftOf="@+id/attention_number"
+            android:layout_toStartOf="@+id/attention_number"
+            android:adjustViewBounds="true"
+            android:src="@drawable/attention" />
+
+        <TextView
+            android:id="@+id/attention_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="100"
+            android:textColor="#a4a4a4" />
+
+        <ImageView
+            android:id="@+id/cert_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_smallest"
+            android:layout_marginRight="@dimen/margin_smallest"
+            android:adjustViewBounds="true"
+            android:src="@drawable/certificate_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cert_icon"
+            android:text="3 级认证"
+            android:textColor="#a4a4a4" />
+    </RelativeLayout>
+
+</LinearLayout>

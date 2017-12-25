@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6" >
+
+	<RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#f76442" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/back"
+            android:typeface="sans"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toRightOf="@+id/back"
+            android:text="@string/creative_user"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text"
+            android:typeface="sans" />
+        
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="10sp"
+            android:text="@string/submit"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+		android:id="@+id/portrait_bar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/topbar"
+		android:layout_margin="5dp"
+		android:background="@drawable/single_round_corner_with_white"
+		android:padding="@dimen/margin_smallest">
+        
+		<TextView
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_marginStart="5dp"
+			android:text="@string/portrait"
+			android:textColor="@color/text"
+			android:textSize="18sp"/>
+		
+		<ImageView
+			android:id="@+id/auth"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentEnd="true"
+			android:layout_centerVertical="true"
+			android:text="@string/left"
+			android:layout_marginRight="5dp"
+			android:layout_marginEnd="5dp"
+			android:src="@drawable/direct"/>
+			
+		<com.moblong.flipped.wedget.CircleImageView
+		    android:id="@+id/portrait"
+		    android:layout_width="45sp"
+		    android:layout_height="45sp"
+		    android:layout_centerVertical="true"
+		    android:layout_marginEnd="5dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_toLeftOf="@+id/auth"
+		    android:layout_toStartOf="@+id/auth"
+		    android:src="@drawable/avatar" />
+
+	</RelativeLayout>
+		
+    <ListView
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/portrait_bar"
+        android:layout_alignRight="@+id/portrait_bar"
+        android:layout_below="@+id/portrait_bar"
+        android:layout_marginBottom="@dimen/margin_smallest"
+        android:layout_marginTop="@dimen/margin_smallest"
+        android:background="@drawable/single_round_corner_with_white" />
+
+</RelativeLayout>

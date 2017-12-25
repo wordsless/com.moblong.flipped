@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6">
+
+	<RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#f76442" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/back"
+            android:typeface="sans"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toRightOf="@+id/back"
+            android:text="@string/details_of_user"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text"
+            android:typeface="sans" />
+
+    </RelativeLayout>
+
+	<ListView
+		android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topbar"
+        android:layout_margin="@dimen/margin_smallest"
+        android:background="@drawable/single_round_corner_with_white"/>
+
+	<TextView
+	    android:id="@+id/register"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/bottom"
+	    android:layout_marginLeft="@dimen/margin_smallest"
+	    android:layout_marginRight="@dimen/margin_smallest"
+	    android:background="#F76442"
+	    android:gravity="center"
+	    android:padding="@dimen/margin_smallest"
+	    android:text="@string/register"
+	    android:textColor="#FFF"
+	    android:textSize="18sp"
+	    android:textStyle="normal"
+	    android:typeface="serif" />
+	
+	<View
+	    android:id="@+id/bottom"
+		android:layout_width="fill_parent"
+	    android:layout_height="5dp"
+	    android:background="#fed6cd"
+	    android:layout_marginLeft="@dimen/margin_smallest"
+        android:layout_marginRight="@dimen/margin_smallest"
+	    android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

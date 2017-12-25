@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ivory" >
+    
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#f76442" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toEndOf="@+id/back"
+            android:layout_margin="10dp"
+            android:text="@string/submit_material"
+            android:typeface="sans"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text"/>
+
+    </RelativeLayout>
+    
+	<TextView
+	    android:id="@+id/descript"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/topbar"
+	    android:layout_margin="@dimen/margin_smallest"
+	    android:textColor="@color/darkgray"/>
+	<ListView
+	    android:id="@+id/choose"
+	    android:layout_below="@+id/descript"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/submit"/>
+	<TextView
+	    android:id="@+id/submit"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="@dimen/margin_smallest"
+	    android:layout_alignParentBottom="true"
+	    android:background="#F76442"
+	    android:gravity="center"
+	    android:padding="@dimen/margin_smallest"
+	    android:text="@string/submit_material"
+	    android:textColor="#FFF"
+	    android:textSize="18sp"
+	    android:textStyle="normal"
+	    android:typeface="serif"/>"
+</RelativeLayout>

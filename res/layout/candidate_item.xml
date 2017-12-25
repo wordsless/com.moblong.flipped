@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_smallest"
+    android:paddingBottom="@dimen/margin_smallest">
+    
+	<com.moblong.flipped.wedget.CircleImageView
+	    android:id="@+id/protrait"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentStart="true"
+	    android:layout_centerVertical="true"
+	    android:src="@drawable/avatar"/>
+
+	<TextView
+	    android:id="@+id/alias"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/protrait"
+	    android:layout_marginLeft="@dimen/margin_smallest"
+	    android:layout_marginStart="@dimen/margin_smallest"
+	    android:layout_toEndOf="@+id/protrait"
+	    android:layout_toRightOf="@+id/protrait"
+	    android:textColor="@color/dimgray"
+	    android:textSize="@dimen/medium_text"
+	    android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/signature"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="@dimen/small_text"
+	    android:layout_below="@+id/alias"
+	    android:layout_toRightOf="@+id/protrait"
+	    android:layout_toEndOf="@+id/protrait"
+	    android:layout_marginLeft="@dimen/margin_smallest"
+	    android:layout_marginStart="@dimen/margin_smallest"
+	    android:textColor="@color/slategray"/>
+</RelativeLayout>

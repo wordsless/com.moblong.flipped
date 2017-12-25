@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ivory" >
+    
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#f76442" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toEndOf="@+id/back"
+            android:layout_margin="10dp"
+            android:text="@string/payment"
+            android:typeface="sans"
+            android:textColor="#FFF"
+            android:textSize="@dimen/medium_text"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/has_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/topbar"
+        android:layout_margin="@dimen/margin_smaller"
+        android:textSize="@dimen/medium_text"
+        android:textColor="@color/gray"
+        android:text="您已提交的资料包括：" />
+ 	<ListView
+	    android:id="@+id/item"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/has_submit"
+	    android:layout_alignStart="@+id/has_submit"
+	    android:layout_alignRight="@+id/has_submit"
+	    android:layout_alignEnd="@+id/has_submit"
+	    android:layout_below="@+id/has_submit"/>
+ 	<TextView
+	    android:id="@+id/should_be_payment"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/has_submit"
+	    android:layout_alignStart="@+id/has_submit"
+	    android:layout_alignRight="@+id/has_submit"
+	    android:layout_alignEnd="@+id/has_submit"
+	    android:layout_marginTop="@dimen/margin_smaller"
+	    android:layout_below="@+id/item"
+	    android:textColor="@color/gray"
+	    android:text="您需要交纳审核费200元整，请点选择支付方式进行支付。"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+ 	
+ 	<ListView
+	    android:id="@+id/payment_way"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/has_submit"
+	    android:layout_alignStart="@+id/has_submit"
+	    android:layout_alignRight="@+id/has_submit"
+	    android:layout_alignEnd="@+id/has_submit"
+	    android:layout_alignParentBottom="true"
+	    android:layout_below="@+id/should_be_payment"/>
+
+</RelativeLayout>
